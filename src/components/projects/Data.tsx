@@ -783,6 +783,11 @@ export const PROJECT_CONTENT = [
         caption: 'ROV with Author',
       }
     ],
+    video: '/Projects/robotics/ROV-Video.mp4',
+    pdfs: [
+      '/Projects/robotics/ROV-LITERATURE.pdf',
+      '/Projects/robotics/ROV-PA.pdf'
+    ],
   },
   {
     title: 'Quadruped 4 Femur-Fibula Joint Bot',
