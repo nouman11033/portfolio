@@ -318,7 +318,7 @@ export const Card = ({
       <motion.button
         layoutId={layout ? `card-${card.title}` : undefined}
         onClick={handleOpen}
-        className={`relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl ${
+        className={`relative z-10 flex h-80 w-56 flex-col items-start justify-start overflow-hidden rounded-3xl cursor-pointer ${
           isSummary && card.title === 'ITC Projects Summary'
             ? 'bg-[linear-gradient(180deg,_rgba(255,255,255,0.95)_0%,_rgba(19,42,101,0.08)_60%,_rgba(19,42,101,0.03)_100%)] text-[#132A65]'
             : isSummary && card.title === 'Deep Learning | AI Summary'
