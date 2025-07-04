@@ -19,6 +19,7 @@ import GitHubButton from 'react-github-btn';
 import { Poppins } from 'next/font/google';
 import { AnimatePresence } from 'framer-motion';
 import { LucideIcon } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/next';
 
 /* ---------- quick-question data ---------- */
 const questions = {
@@ -210,6 +211,7 @@ export default function Home() {
       <div className="fixed bottom-6 right-6 z-50">
         <WelcomeModal />
       </div>
+      <Analytics />
     </>
   );
 }
