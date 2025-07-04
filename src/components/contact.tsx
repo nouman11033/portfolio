@@ -63,7 +63,7 @@ export function Contact() {
           <div>
             <p className="text-foreground text-sm font-medium">Location</p>
             <p className="text-muted-foreground text-sm">
-              Preferably San Francisco 🇺🇸
+              Global 🌐
             </p>
           </div>
         </div>
