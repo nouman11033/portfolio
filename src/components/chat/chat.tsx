@@ -300,13 +300,13 @@ const Chat = () => {
         />
         <div className="pt-2">
           <GitHubButton
-            href="https://github.com/toukoum/portfolio"
+            href="https://github.com/nouman11033"
             data-color-scheme="no-preference: light; light: light; dark: light_high_contrast;"
             data-size="large"
-            data-show-count="true"
-            aria-label="Star toukoum/portfolio on GitHub"
+            data-show-count="false"
+            aria-label="Follow nouman11033 on GitHub"
           >
-            Star
+            Follow
           </GitHubButton>
         </div>
       </div>
