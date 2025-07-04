@@ -1,11 +1,7 @@
-
-
-![image](assets/readme-photo.png)
- 
-# World's first AI portfolio 🤖✨  
+# Nouman Jinabade Portfolio
 
 **Static portfolios are dead.**  
-So I built [toukoum.fr](https://toukoum.fr).
+So I built this interactive AI-powered portfolio.
 
 Instead of making you scroll endlessly, my portfolio adapts to *you*.  
 Ask a question — my AI avatar replies instantly.
@@ -14,18 +10,16 @@ Ask a question — my AI avatar replies instantly.
 
 - 🧠 **Tech recruiter?** Ask about my stack & results  
 - 💻 **Dev?** Dive into my code & mindset  
-- 🧑‍🤝‍🧑 **Friend or family?** See what I’ve been working on  
+- 🤖 **Curious about AI, Robotics, or Data Science?** Just ask!  
 
 ---
 
 This is not a portfolio.  
-It’s a **conversation tailored to your curiosity**.
+It's a **conversation tailored to your curiosity**.
 
-➡️ **Try it now:** [https://toukoum.fr](https://toukoum.fr)  
-*What will you ask?*
-
-
+➡️ **Contact me:** nouman.jinabade@gmail.com  
+[GitHub](https://github.com/nouman11033) | [LinkedIn](https://www.linkedin.com/in/nouman-jinabade-b6a075223?originalSubdomain=in)
 
 #### 🔖 Tags
 
-`#AIPortfolio` `#InnovationInTech` `#DigitalResume` `#JobSearch` `#TechInnovation` `#WebDevelopment` `#FutureTech`
+`#AIPortfolio` `#Robotics` `#DataScience` `#DeepLearning` `#MITMicroMasters` `#WebDevelopment`

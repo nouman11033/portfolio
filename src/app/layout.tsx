@@ -13,15 +13,15 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Toukoum Portfolio",
-  description: "Interactive portfolio with an AI-powered Memoji that answers questions about me, my skills, and my experience",
+  title: "Nouman Jinabade Portfolio",
+  description: "Interactive portfolio with an AI-powered avatar that answers questions about Nouman Jinabade, his skills, and his experience in Robotics, Data Science, and Deep Learning.",
   keywords: [
-    "Toukoum", 
+    "Nouman Jinabade", 
     "Portfolio", 
     "Developer", 
     "AI", 
     "Interactive", 
-    "Memoji", 
+    "avatar", 
     "Web Development",
     "Full Stack",
     "Next.js",
@@ -29,24 +29,24 @@ export const metadata: Metadata = {
   ],
   authors: [
     {
-      name: "Toukoum",
-      url: "https://toukoum.fr",
+      name: "Nouman Jinabade",
+      url: "https://noumanjinabade.com",
     },
   ],
-  creator: "Toukoum",
+  creator: "Nouman Jinabade",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://toukoum.fr",
-    title: "Toukoum Portfolio",
-    description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    siteName: "Toukoum Portfolio",
+    url: "https://noumanjinabade.com",
+    title: "Nouman Jinabade Portfolio",
+    description: "Interactive portfolio with an AI-powered avatar that answers questions about Nouman Jinabade",
+    siteName: "Nouman Jinabade Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Toukoum Portfolio",
-    description: "Interactive portfolio with an AI-powered Memoji that answers questions about me",
-    creator: "@toukoum",
+    title: "Nouman Jinabade Portfolio",
+    description: "Interactive portfolio with an AI-powered avatar that answers questions about Nouman Jinabade, his skills, and his experience in Robotics, Data Science, and Deep Learning.",
+    creator: "@nouman11033",
   },
   icons: {
     icon: [
@@ -69,7 +69,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
       <body
         className={cn(

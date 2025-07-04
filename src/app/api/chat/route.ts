@@ -27,8 +27,12 @@ function errorHandler(error: unknown) {
 }
 
 export async function POST(req: Request) {
+  console.log('API /api/chat POST called');
+  const body = await req.json();
+  console.log('API /api/chat request body:', body);
+
   try {
-    const { messages } = await req.json();
+    const { messages } = body;
     console.log('[CHAT-API] Incoming messages:', messages);
 
     messages.unshift(SYSTEM_PROMPT);
@@ -52,9 +56,12 @@ export async function POST(req: Request) {
       maxSteps: 2,
     });
 
-    return result.toDataStreamResponse({
+    const response = result.toDataStreamResponse({
       getErrorMessage: errorHandler,
     });
+
+    console.log('API /api/chat response:', response);
+    return response;
   } catch (err) {
     console.error('Global error:', err);
     const errorMessage = errorHandler(err);

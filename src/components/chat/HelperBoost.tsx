@@ -37,7 +37,6 @@ const questions = {
   Me: 'Who are you? I want to know more about you.',
   Projects: 'What are your projects? What are you working on right now?',
   Skills: 'What are your skills? Give me a list of your soft and hard skills.',
-  Fun: "What the craziest thing you've ever done? (mb?) What are your hobbies? ",
   Contact:
     'How can I reach you? What kind of project would make you say "yes" immediately?',
 };
@@ -46,7 +45,6 @@ const questionConfig = [
   { key: 'Me', color: '#329696', icon: Laugh },
   { key: 'Projects', color: '#3E9858', icon: BriefcaseBusiness },
   { key: 'Skills', color: '#856ED9', icon: Layers },
-  { key: 'Fun', color: '#B95F9D', icon: PartyPopper },
   { key: 'Contact', color: '#C19433', icon: UserRoundSearch },
 ];
 
@@ -58,7 +56,6 @@ const specialQuestions = [
   'What projects are you most proud of?',
   'What are your skills?',
   'How can I reach you?',
-  "What's the craziest thing you've ever done?",
 ];
 
 const questionsByCategory = [
@@ -71,6 +68,7 @@ const questionsByCategory = [
       'What are your passions?',
       'How did you get started in tech?',
       'Where do you see yourself in 5 years?',
+      'What inspired you to pursue Robotics and Data Science?',
     ],
   },
   {
@@ -83,13 +81,14 @@ const questionsByCategory = [
       'Where are you working now?',
       'Why should I hire you?',
       "What's your educational background?",
+      'Tell me about your MIT MicroMasters experience.',
     ],
   },
   {
     id: 'projects',
     name: 'Projects',
     icon: CodeIcon,
-    questions: ['What projects are you most proud of?'],
+    questions: ['What projects are you most proud of?', 'Show me your AGI or RAG projects.'],
   },
   {
     id: 'skills',
@@ -97,18 +96,8 @@ const questionsByCategory = [
     icon: GraduationCapIcon,
     questions: [
       'What are your skills?',
-      'How was your experience at École 42?',
-    ],
-  },
-  {
-    id: 'fun',
-    name: 'Fun',
-    icon: PartyPopper,
-    questions: [
-      'Mountain Bike you said?? Show me!',
-      "What's the craziest thing you've ever done?",
-      'Mac or PC?',
-      'What are you certain about that 90% get wrong?',
+      'What are your strengths in AI/ML?',
+      'What programming languages do you use?',
     ],
   },
   {

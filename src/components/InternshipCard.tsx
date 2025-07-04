@@ -6,7 +6,7 @@ import { useRouter } from 'next/navigation';
 
 const InternshipCard = () => {
   const openMail = () => {
-    window.open('mailto:raphaelgiraud12@gmail.com', '_blank');
+    window.open('mailto:nouman.jinabade@gmail.com', '_blank');
   };
   const router = useRouter();
 
@@ -23,17 +23,17 @@ const InternshipCard = () => {
           {/* Avatar placeholder */}
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
-              src="/avatar-raphael.jpg"
-              alt="Raphael's avatar"
+              src="/portrait.jpg"
+              alt="Nouman's avatar"
               className="h-full w-full object-cover"
             />
           </div>
           <div>
             <h2 className="text-foreground text-2xl font-semibold">
-              Raphael Giraud
+              Nouman Jinabade
             </h2>
             <p className="text-muted-foreground text-sm">
-              Intership Application
+              AI Engineer Application
             </p>
           </div>
         </div>
@@ -108,10 +108,7 @@ const InternshipCard = () => {
           What I bring
         </p>
         <p className="text-foreground text-sm">
-          Real-world AI dev experience from Lighton (MCP, secure GPTs, RAG
-          pipelines). <br /> 3x hackathon wins (ETH Oxford, Paris Blockchain
-          Week, Colosseum Breakout on Solana). <br /> I ship fast, and love
-          building useful things that actually work.
+          Industry 4.0 AI Engineer intern at ITC PSPD LTD, Hyderabad. Building in-house GPT AGI, RAG pipelines, and AI-driven analytics for supply chain and SAP. Ex-Lead Analyst at MetaXLabs. Passionate about AI, Robotics, and Data Science.
         </p>
       </div>
 
@@ -119,9 +116,7 @@ const InternshipCard = () => {
       <div className="mt-8">
         <p className="text-foreground mb-2 text-lg font-semibold">Goal</p>
         <p className="text-foreground text-sm">
-          Join a bold, innovative team building AI-powered tools that matter. I
-          want to improve fast, contribute hard, and leave a mark. I’m fast,
-          flexible, and HUNGRYYYYY 🔥
+          Join a bold, innovative team building AI-powered tools that matter. I want to improve fast, contribute hard, and leave a mark. I'm fast, flexible, and always hungry for new challenges!
         </p>
       </div>
 

@@ -6,22 +6,21 @@ export const getInternship = tool({
     "Gives a summary of what kind of internship I'm looking for, plus my contact info and how to reach me. Use this tool when the user asks about my internship search or how to contact me for opportunities.",
   parameters: z.object({}),
   execute: async () => {
-    return `Here’s what I’m looking for 👇
+    return `Here's what I'm looking for 👇
 
 - 📅 **Duration**: 6-month internship starting **September 2025**
-- 🌍 **Location**: Preferably **San Francisco** or anywhere in the **United States**
-- 🧑‍💻 **Focus**: AI development, full-stack web apps, SaaS, agentic workflows
-- 🛠️ **Stack**: Python, React/Next.js, Tailwind CSS, TypeScript, GPT, RAG, etc.
-- 💼 **Visa**: I’m based in Paris 🇫🇷 so I might need **J-1 sponsorship**
-- ✅ **What I bring**: Real experience with secure on-prem GPTs (Lighton), deepsearch engines, custom RAG tools, and hackathon wins like **ETH Oxford** & **Paris Blockchain Week**
-- 🔥 I move fast, learn faster, and I’m HUNGRYYYYY for big challenges
+- 🌍 **Location**: Preferably **San Francisco** or open to global/remote
+- 🧑‍💻 **Focus**: AI/ML engineering, Robotics, Data Science, AGI, RAG, full-stack web apps
+- 🛠️ **Stack**: Python, Node.js, React/Next.js, TypeScript, .NET, Power BI, Tableau, Azure, SAP, R, C/C++, AGI, RAG, and more
+- 💼 **Visa**: Based in India 🇮🇳, open to relocation or remote
+- ✅ **What I bring**: Real experience with in-house GPT AGI, RAG pipelines, AI-driven analytics, dashboard automation, and 50+ projects
+- 🔥 I move fast, learn faster, and am always hungry for new challenges
 
 📬 **Contact me** via:
-- Email: raphaelgiraud12@gmail.com
-- LinkedIn: [linkedin.com/in/raphael-giraud](https://www.linkedin.com/in/raphael-giraud-ai/)
-- GitHub: [github.com/raphaelgiraud](https://github.com/toukoum)
+- Email: nouman.jinabade@gmail.com
+- LinkedIn: [linkedin.com/in/nouman-jinabade-b6a075223](https://www.linkedin.com/in/nouman-jinabade-b6a075223)
+- GitHub: [github.com/nouman11033](https://github.com/nouman11033)
 
-Let's build cool shit together ✌️
-    `;
+Let's build something amazing together ✌️`;
   },
 });

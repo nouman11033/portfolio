@@ -2,90 +2,127 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { CalendarDays, Code2, Globe } from 'lucide-react';
 
 export function Contact() {
-  // Contact information
-  const contactInfo = {
-    name: 'Raphael Giraud',
-    email: 'raphaelgiraud12@gmail.com',
-    handle: '@Raphael.Giraud',
-    socials: [
-      {
-        name: 'LinkedIn',
-        url: 'https://www.linkedin.com/in/raphael-giraud-60939519a/',
-      },
-      {
-        name: 'Youtube',
-        url: 'https://www.youtube.com/@toukoum',
-      },
-      {
-        name: 'Instagram',
-        url: 'https://www.instagram.com/raphael.giraud/',
-      },
-      {
-        name: 'Discord',
-        url: 'https://discord.com/users/toukoum',
-      },
-      {
-        name: 'Github',
-        url: 'https://github.com/toukoum',
-      },
-      {
-        name: 'X',
-        url: 'https://x.com/toukoumcode',
-      },
-    ],
-  };
-
-  // Function to handle opening links
-  const openLink = (url: string) => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+  const openMail = () => {
+    window.open('mailto:nouman.jinabade@gmail.com', '_blank');
   };
 
   return (
-    <div className="mx-auto mt-8 w-full">
-      <div className="bg-accent w-full overflow-hidden rounded-3xl px-6 py-8 font-sans sm:px-10 md:px-16 md:py-12">
-        {/* Header Section */}
-        <div className="mb-8 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-          <h2 className="text-foreground text-3xl font-semibold md:text-4xl">
-            Contacts
-          </h2>
-          <span className="mt-2 sm:mt-0">
-            {contactInfo.handle}
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-accent mx-auto mt-8 w-full max-w-4xl rounded-3xl px-6 py-8 font-sans sm:px-10 md:px-16 md:py-12"
+    >
+      {/* Header */}
+      <div className="mb-6 flex flex-col items-center sm:flex-row sm:items-center sm:justify-between">
+        <div className="flex items-center gap-4">
+          {/* Avatar placeholder */}
+          <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
+            <img
+              src="/portrait.jpg"
+              alt="Nouman's avatar"
+              className="h-full w-full object-cover"
+            />
+          </div>
+          <div>
+            <h2 className="text-foreground text-2xl font-semibold">
+              Nouman Jinabade
+            </h2>
+            <p className="text-muted-foreground text-sm">
+              AI Engineer Application
+            </p>
+          </div>
+        </div>
+        {/* Live badge */}
+        <div className="mt-4 flex items-center gap-2 sm:mt-0">
+          <span className="flex items-center gap-1 rounded-full border border-green-500 px-3 py-0.5 text-sm font-medium text-green-500">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500 opacity-75"></span>
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-green-500"></span>
+            </span>
+            Live
           </span>
         </div>
-
-        {/* Email Section */}
-        <div className="mt-8 flex flex-col md:mt-10">
-          <div
-            className="group mb-5 cursor-pointer"
-            onClick={() => openLink(`mailto:${contactInfo.email}`)}
-          >
-            <div className="flex items-center gap-1">
-              <span className="text-base font-medium text-blue-500 hover:underline sm:text-lg">
-                {contactInfo.email}
-              </span>
-              <ChevronRight className="h-5 w-5 text-blue-500 transition-transform duration-300 group-hover:translate-x-1" />
-            </div>
+      </div>
+      {/* Internship Info */}
+      <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <div className="flex items-start gap-3">
+          <CalendarDays className="mt-1 h-5 w-5 text-blue-500" />
+          <div>
+            <p className="text-foreground text-sm font-medium">Duration</p>
+            <p className="text-muted-foreground text-sm">
+              6 months – starting September 2025 (fall 2025)
+            </p>
           </div>
-
-          {/* Social Links */}
-          <div className="flex flex-wrap gap-x-6 gap-y-5 sm:gap-x-8">
-            {contactInfo.socials.map((social) => (
-              <button
-                key={social.name}
-                className="text-muted-foreground hover:text-foreground cursor-pointer text-sm transition-colors"
-                onClick={() => openLink(social.url)}
-                title={social.name}
-              >
-                {social.name}
-              </button>
-            ))}
+        </div>
+        <div className="flex items-start gap-3">
+          <Globe className="mt-1 h-5 w-5 text-green-500" />
+          <div>
+            <p className="text-foreground text-sm font-medium">Location</p>
+            <p className="text-muted-foreground text-sm">
+              Preferably San Francisco 🇺🇸
+            </p>
+          </div>
+        </div>
+        {/* Tech stack */}
+        <div className="flex items-start gap-3 sm:col-span-2">
+          <Code2 className="mt-1 h-5 w-5 text-purple-500" />
+          <div className="w-full">
+            <p className="text-foreground text-sm font-medium">Tech stack</p>
+            <div className="text-muted-foreground grid grid-cols-1 gap-y-1 text-sm sm:grid-cols-2">
+              <ul className="decoration-none list-disc pl-4">
+                <li>Python, Next.js, TypeScript, Tailwind CSS</li>
+                <li>Vercel AI SDK, Supabase, Prisma</li>
+                <li>OpenAI, Mistral, Claude, Whisper</li>
+                <li>Prompt engineering, fine-tuning</li>
+              </ul>
+              <ul className="list-disc pl-4">
+                <li>Weaviate, Pinecone, vector DBs</li>
+                <li>Hugging Face Transformers</li>
+                <li>Tool routing, calling, RAG</li>
+                <li>Hackathons + AI agent workflows</li>
+                <li>
+                  <a
+                    href="/chat?query=What%20are%20your%20skills%3F%20Give%20me%20a%20list%20of%20your%20soft%20and%20hard%20skills."
+                    className="cursor-pointer items-center text-blue-500 underline"
+                  >
+                    See more
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
+      {/* What I bring */}
+      <div className="mt-10">
+        <p className="text-foreground mb-2 text-lg font-semibold">
+          What I bring
+        </p>
+        <p className="text-foreground text-sm">
+          Industry 4.0 AI Engineer intern at ITC PSPD LTD, Hyderabad. Building in-house GPT AGI, RAG pipelines, and AI-driven analytics for supply chain and SAP. Ex-Lead Analyst at MetaXLabs. Passionate about AI, Robotics, and Data Science.
+        </p>
+      </div>
+      {/* Goal */}
+      <div className="mt-8">
+        <p className="text-foreground mb-2 text-lg font-semibold">Goal</p>
+        <p className="text-foreground text-sm">
+          Join a bold, innovative team building AI-powered tools that matter. I want to improve fast, contribute hard, and leave a mark. I'm fast, flexible, and always hungry for new challenges!
+        </p>
+      </div>
+      {/* Contact button */}
+      <div className="mt-10 flex justify-center">
+        <button
+          onClick={openMail}
+          className="cursor-pointer rounded-full bg-black px-6 py-3 font-semibold text-white transition-colors duration-300 hover:bg-zinc-800"
+        >
+          Contact me
+        </button>
+      </div>
+    </motion.div>
   );
 }
 

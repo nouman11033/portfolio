@@ -2,7 +2,7 @@
 import { useChat } from '@ai-sdk/react';
 import { AnimatePresence, motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
-import { useSearchParams } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { toast } from 'sonner';
 
@@ -76,30 +76,17 @@ const Avatar = dynamic<AvatarProps>(
       // Conditional rendering based on detection
       return (
         <div
-          className={`flex items-center justify-center rounded-full transition-all duration-300 ${hasActiveTool ? 'h-20 w-20' : 'h-28 w-28'}`}
+          className={`flex items-center justify-center rounded-full transition-all duration-300 ${hasActiveTool ? 'h-12 w-12' : 'h-16 w-16'}`}
         >
           <div
             className="relative cursor-pointer"
             onClick={() => (window.location.href = '/')}
           >
-            {isIOS() ? (
-              <img
-                src="/landing-memojis.png"
-                alt="iOS avatar"
-                className="h-full w-full scale-[1.8] object-contain"
-              />
-            ) : (
-              <video
-                ref={videoRef}
-                className="h-full w-full scale-[1.8] object-contain"
-                muted
-                playsInline
-                loop
-              >
-                <source src="/final_memojis.webm" type="video/webm" />
-                <source src="/final_memojis_ios.mp4" type="video/mp4" />
-              </video>
-            )}
+            <img
+              src="/memojis-new/MEM2.7.png"
+              alt="Nouman's memoji avatar"
+              className="h-full w-full scale-[1.8] object-contain"
+            />
           </div>
         </div>
       );
@@ -119,11 +106,12 @@ const MOTION_CONFIG = {
 
 const Chat = () => {
   const videoRef = useRef<HTMLVideoElement | null>(null);
-  const searchParams = useSearchParams();
-  const initialQuery = searchParams.get('query');
   const [autoSubmitted, setAutoSubmitted] = useState(false);
   const [loadingSubmit, setLoadingSubmit] = useState(false);
   const [isTalking, setIsTalking] = useState(false);
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const initialQuery = searchParams.get('query');
 
   const {
     messages,
@@ -139,6 +127,7 @@ const Chat = () => {
     append,
   } = useChat({
     onResponse: (response) => {
+      console.log('AI response received:', response);
       if (response) {
         setLoadingSubmit(false);
         setIsTalking(true);
@@ -217,6 +206,7 @@ const Chat = () => {
   const submitQuery = (query) => {
     if (!query.trim() || isToolInProgress) return;
     setLoadingSubmit(true);
+    console.log('Submitting user query:', query);
     append({
       role: 'user',
       content: query,
@@ -274,6 +264,30 @@ const Chat = () => {
   // Calculate header height based on hasActiveTool
   const headerHeight = hasActiveTool ? 100 : 180;
 
+  useEffect(() => {
+    console.log('Chat component mounted');
+    return () => console.log('Chat component unmounted');
+  }, []);
+
+  useEffect(() => {
+    console.log('Chat messages updated:', messages);
+  }, [messages]);
+
+  // Debug function to log current chat state
+  const debugLogChatState = () => {
+    console.log('[DEBUG] Current chat state:');
+    console.log('  messages:', messages);
+    console.log('  input:', input);
+    console.log('  autoSubmitted:', autoSubmitted);
+    console.log('  loadingSubmit:', loadingSubmit);
+    console.log('  isTalking:', isTalking);
+    console.log('  initialQuery:', initialQuery);
+  };
+
+  useEffect(() => {
+    debugLogChatState();
+  }, [messages, input, autoSubmitted, loadingSubmit, isTalking, initialQuery]);
+
   return (
     <div className="relative h-screen overflow-hidden">
       <div className="absolute top-6 right-8 z-51 flex flex-col-reverse items-center justify-center gap-1 md:flex-row">
@@ -299,7 +313,7 @@ const Chat = () => {
 
       {/* Fixed Avatar Header with Gradient */}
       <div
-        className="fixed top-0 right-0 left-0 z-50"
+        className="fixed top-0 right-0 left-0 z-50 mb-3"
         style={{
           background:
             'linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.95) 30%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)',
@@ -318,11 +332,12 @@ const Chat = () => {
             </ClientOnly>
           </div>
 
+          {/* Always show the latest user message under the avatar if it exists */}
           <AnimatePresence>
-            {latestUserMessage && !currentAIMessage && (
+            {latestUserMessage && (
               <motion.div
                 {...MOTION_CONFIG}
-                className="mx-auto flex max-w-3xl px-4"
+                className="mx-auto flex max-w-l mt-6 px-1"
               >
                 <ChatBubble variant="sent">
                   <ChatBubbleMessage>
@@ -341,11 +356,11 @@ const Chat = () => {
       </div>
 
       {/* Main Content Area */}
-      <div className="container mx-auto flex h-full max-w-3xl flex-col">
+      <div className="container mx-auto flex h-full max-w-[67.6rem] flex-col">
         {/* Scrollable Chat Content */}
         <div
           className="flex-1 overflow-y-auto px-2"
-          style={{ paddingTop: `${headerHeight}px` }}
+          style={{ paddingTop: `calc(${headerHeight}px + 1.5rem)` }}
         >
           <AnimatePresence mode="wait">
             {isEmptyState ? (
@@ -396,12 +411,12 @@ const Chat = () => {
           </div>
         </div>
         <a
-          href="https://x.com/toukoumcode"
+          href="https://x.com/noumanjinabade"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed right-3 bottom-0 z-10 mb-4 hidden cursor-pointer items-center gap-2 rounded-xl px-4 py-2 text-sm hover:underline md:block"
         >
-          @toukoum
+          @noumanjinabade
         </a>
       </div>
     </div>

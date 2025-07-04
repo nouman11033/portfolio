@@ -27,17 +27,29 @@ export default function WelcomeModal({ trigger }: WelcomeModalProps) {
   const defaultTrigger = (
     <Button
       variant="ghost"
-      className="h-auto w-auto cursor-pointer rounded-2xl bg-white/30 p-3 shadow-lg backdrop-blur-lg hover:bg-white/60 focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
+      className="h-auto w-auto cursor-pointer rounded-2xl bg-transparent p-0 shadow-none hover:bg-transparent focus-visible:bg-transparent focus-visible:ring-0 focus-visible:ring-offset-0"
       onClick={() => setIsOpen(true)}
     >
-      <Image
-        src="/logo-toukoum.svg"
-        width={100}
-        height={100}
-        alt="Logo"
-        className="w-6 md:w-8"
-      />
-      <span className="sr-only">About Toukoum</span>
+      {/* Info Icon with Black Circle Background */}
+      <span className="inline-flex items-center justify-center self-center bg-neutral-800 h-8 px-3 rounded-full">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="#FFFFFF"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="w-5 h-5 md:w-6 md:h-6"
+        >
+          <circle cx="12" cy="12" r="10" />
+          <line x1="12" y1="16" x2="12" y2="12" />
+          <line x1="12" y1="8" x2="12.01" y2="8" />
+        </svg>
+      </span>
+      <span className="sr-only">About Nouman</span>
     </Button>
   );
 
