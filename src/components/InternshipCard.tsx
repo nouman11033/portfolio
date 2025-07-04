@@ -23,7 +23,7 @@ const InternshipCard = () => {
           {/* Avatar placeholder */}
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
-              src="/portrait.jpg"
+              src="/potrait.png"
               alt="Nouman's avatar"
               className="h-full w-full object-cover"
             />
@@ -66,7 +66,7 @@ const InternshipCard = () => {
           <div>
             <p className="text-foreground text-sm font-medium">Location</p>
             <p className="text-muted-foreground text-sm">
-              Preferably San Francisco 🇺🇸
+              Global 🌐
             </p>
           </div>
         </div>
