@@ -709,7 +709,7 @@ export const PROJECT_CONTENT = [
       {
         src: '/Projects/deep learning/dash1.png',
         alt: 'Automated Dashboard App',
-        style: { height: '640px', width: '500px', objectFit: 'contain', borderRadius: '12px', background: 'white', border: '1px solid #e5e7eb' },
+        style: { height: '320px', width: '700px', objectFit: 'contain', borderRadius: '12px', background: 'white', border: '1px solid #e5e7eb' },
         caption: 'Automated Dashboard Streamlit App',
       }
     ],
@@ -1491,6 +1491,43 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
                           width: style.width,
                           height: style.height,
                           objectFit: style.objectFit,
+                          borderRadius: style.borderRadius,
+                        }}
+                      />
+                      {hasCaption(image) && (
+                        <div className="text-center text-xs text-neutral-600 mt-2">{image.caption}</div>
+                      )}
+                    </div>
+                  );
+                })()
+              ) : projectData.title === 'Automated Dashboard Generation Using LLMs' ? (
+                (() => {
+                  const hasStyle = (img: any): img is typeof image & { style: React.CSSProperties } => 'style' in img;
+                  const hasCaption = (img: any): img is typeof image & { caption: string } => 'caption' in img;
+                  const style = hasStyle(image) ? image.style : {};
+                  return (
+                    <div
+                      key={index}
+                      style={{
+                        width: '700px',
+                        height: '320px',
+                        display: 'flex',
+                        flexDirection: 'column',
+                        alignItems: 'center',
+                        justifyContent: 'flex-start',
+                        background: style.background,
+                        border: style.border,
+                        borderRadius: style.borderRadius,
+                      }}
+                      className="mx-auto rounded-2xl bg-white border border-neutral-200 dark:border-neutral-700"
+                    >
+                      <img
+                        src={image.src}
+                        alt={image.alt}
+                        style={{
+                          width: '700px',
+                          height: '320px',
+                          objectFit: 'contain',
                           borderRadius: style.borderRadius,
                         }}
                       />
