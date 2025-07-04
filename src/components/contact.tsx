@@ -22,7 +22,7 @@ export function Contact() {
           {/* Avatar placeholder */}
           <div className="bg-muted h-16 w-16 overflow-hidden rounded-full shadow-md">
             <img
-              src="/portrait.jpg"
+              src="/potrait.png"
               alt="Nouman's avatar"
               className="h-full w-full object-cover"
             />
