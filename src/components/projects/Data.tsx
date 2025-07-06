@@ -1496,10 +1496,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Main image (blister.png) */}
           {(() => {
             const image = projectData.images[0];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1587,10 +1587,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Final standalone image (blister3.png) */}
           {(() => {
             const image = projectData.images[1];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1648,10 +1648,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Main image (ink1.png) */}
           {(() => {
             const image = projectData.images[0];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1687,10 +1687,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Secondary image (ink.png) */}
           {(() => {
             const image = projectData.images[1];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1726,10 +1726,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Third image (scm4.png, NDA) */}
           {(() => {
             const image = projectData.images[2];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1770,10 +1770,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Main image (pen.png) */}
           {(() => {
             const image = projectData.images[0];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1809,10 +1809,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Secondary image (pen1.png) */}
           {(() => {
             const image = projectData.images[1];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1848,10 +1848,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Third image (scm4.png, NDA) */}
           {(() => {
             const image = projectData.images[2];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1892,10 +1892,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Main image (truck.png) */}
           {(() => {
             const image = projectData.images[0];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1931,10 +1931,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Secondary image (truck1.png) */}
           {(() => {
             const image = projectData.images[1];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
@@ -1970,10 +1970,10 @@ export const ProjectContent = ({ project }: { project: ProjectProps }) => {
           {/* Third image (scm4.png, NDA) */}
           {(() => {
             const image = projectData.images[2];
-            if (!image) return null;
-            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && !!img.style;
-            const width = 'width' in image ? (image as any).width + 'px' : (hasStyle(image) && image.style.width ? image.style.width : undefined);
-            const height = 'height' in image ? (image as any).height + 'px' : (hasStyle(image) && image.style.height ? image.style.height : undefined);
+            if (!image || typeof image !== 'object') return null;
+            const hasStyle = (img: any): img is { style: React.CSSProperties } => !!img && typeof img === 'object' && 'style' in img && !!img.style;
+            const width = hasStyle(image) && image.style.width ? image.style.width : undefined;
+            const height = hasStyle(image) && image.style.height ? image.style.height : undefined;
             return (
               <div
                 style={{
