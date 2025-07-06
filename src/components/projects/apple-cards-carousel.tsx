@@ -478,14 +478,7 @@ export const Card = ({
         {/* Blister Detection & Rating SYS Card Cover Video Centered */}
         {card.title === 'Blister Detection & Rating SYS' && (
           <div className="absolute inset-0 flex items-center justify-center z-25 overflow-hidden bg-white">
-            <video
-              src="/Projects/ITC/blistervid.mp4"
-              autoPlay
-              loop
-              muted
-              playsInline
-              className="w-38 h-28 object-contain"
-            />
+            <img src="/Projects/ITC/blister.png" alt="Blister Detection Cover" className="w-48 h-48 object-contain" />
           </div>
         )}
         {/*<div className="absolute inset-0 z-20 cursor-pointer bg-black/20 hover:bg-black/2" />*/}

@@ -120,14 +120,6 @@ export const PROJECT_CONTENT = [
     techStack: ['Node.js', 'HTML5', 'Tailwind CSS', 'React', 'Zustand', 'Django', 'Python'],
     date: '2025',
     links: [],
-    images: [
-      {
-        src: '/Projects/ITC/scm3.png',
-        alt: 'SCM Dashboard Overview',
-        style: { height: '320px', width: '700px', objectFit: 'contain', borderRadius: '12px', background: 'white', border: '1px solid #e5e7eb' },
-        caption: 'SCM Dashboard Overview',
-      },
-    ],
     sliderImages: [
       {
         src: '/Projects/ITC/scm1.png',
@@ -202,7 +194,6 @@ export const PROJECT_CONTENT = [
         style: { height: '320px', width: '700px', objectFit: 'contain', borderRadius: '12px', background: 'white', border: '1px solid #e5e7eb' },
       },
     ],
-    video: '/Projects/ITC/blistervid.mp4',
     customMedia: true,
     skipDefaultGallery: true,
   },
